@@ -21,7 +21,7 @@ export default class extends Command {
     const data = await res.json();
 
     if (!args.country) return message.channel.send(`Please provide a country!`);
-    const country = data.find(c => c.country.toLowerCase() === args.country.toLowerCase());
+    const country = data.find(c => c.country.toLowerCase().includes(args.country.toLowerCase()));
     if (!country) return message.channel.send(`Country not found, or does not have the disease yet.`);
 
     message.channel.send(
