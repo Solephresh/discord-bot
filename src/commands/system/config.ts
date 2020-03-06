@@ -18,12 +18,12 @@ export default class extends Command {
   }
 
   public async exec(message: Message, args: any) {
-    if (message.author.id !== this.client.ownerID) if (!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(`🚫 You do not have the correct permissions to run this command, \`Manage Server\``);
+    if (!['328983966650728448', '572523833790038018'].includes(message.author.id)) if (!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(`🚫 You do not have the correct permissions to run this command, \`Manage Server\``);
     const input: string[] = args.raw ? args.raw.split(' ') : [];
     const guild = await this.client.ext.guild(message.guild.id);
     if (!args.raw) {
       // @ts-ignore
-      return message.channel.send(`⚙️ Settings for **${message.guild.name}**\n**COVID-19 Stats Channel** is **${guild.channel ? message.guild.channels.cache.get(guild.channel).toString() : 'None'}** (${this.client.akairoOptions.prefix()}config channel <#channel | name | id>)\n**COVID-19 Stats Type** is **${guild.type ? guild.type : 'all'}** (${this.client.akairoOptions.prefix()}config type <"all" | "Country Name here")\n\n*None of these work at the moment, pl*`)
+      return message.channel.send(`⚙️ Settings for **${message.guild.name}**\n**COVID-19 Stats Channel** is **${guild.channel ? message.guild.channels.cache.get(guild.channel).toString() : 'None'}** (${this.client.akairoOptions.prefix()}config channel <#channel | name | id>)\n**COVID-19 Stats Type** is **${guild.type ? guild.type : 'all'}** (${this.client.akairoOptions.prefix()}config type <"all" | "Country Name here")\n\n*None of these work at the moment, but will work in the future.*`)
     }
     if (input[0] === "channel") {
       if (!input[1]) return message.channel.send(`Provide a **channel**, it can be #channel, a name or it's id.`)
