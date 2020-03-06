@@ -23,8 +23,7 @@ export default class extends Command {
         .setAuthor(`COVID-19 affected countries`)
         .setFooter('COVID-19 realtime statistics')
         .addFields([
-          { name: 'List of affected countries', value: data.splice(Math.ceil(data.length / 2)).map(c => `\`${c.country}\``).join(', ') },
-          { name: '\u200b', value: data.splice(Math.ceil(data.length / 2), data.length).map(c => `\`${c.country}\``).join(', ') }
+          { name: 'List of affected countries', value: `https://www.worldometers.info/coronavirus/#countries We support all the countries in there!`).join(', ') }
         ])
     );
   }
