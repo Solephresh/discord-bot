@@ -23,7 +23,7 @@ export default class extends Command {
         .setColor(this.client.color)
         .setTitle('Commands')
         .setThumbnail(this.client.user.displayAvatarURL())
-        .setDescription('COVID-19 is a **pandemic** sweeping across nations wiping out communites, there have been over **90K** people who have been infected with COVID-19 and could rise up.')
+        .setDescription('COVID-19 is a **pandemic** across nations, there have been over **100K** people who have been infected with COVID-19 and could rise up.')
         //@ts-ignore
         .setFooter(`Use "${this.client.akairoOptions.prefix()}help <command name>" to get more info on a command.`);
 
