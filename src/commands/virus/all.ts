@@ -36,17 +36,17 @@ export default class extends Command {
             .setFooter('COVID-19 realtime statistics')
             .addFields([{
                     name: 'Cases',
-                    value: country.cases,
+                    value: data.cases,
                     inline: true
                 },
                 {
                     name: 'Deaths',
-                    value: country.deaths,
+                    value: data.deaths,
                     inline: true
                 },
                 {
                     name: 'Recovered',
-                    value: country.recovered,
+                    value: data.recovered,
                     inline: true
                 },
             ]));
